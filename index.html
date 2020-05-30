@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Stage</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <a href="#">David Delahaye</a>
+        <div class="links">
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+        </div>
+    </header>
+    <div class="wrapper">
+        <section id="hero">
+            <div class="inner">
+                <div class="clipper">
+                    <h1>On Stage</h1>
+                </div>
+                <div class="anim-wrapper">
+                <h3>Digital representation specialised for performers</h3>
+                <a href="#" class="primary read-button">Get on Stage</a>
+                </div>
+            </div>
+        </section>
+        <section id="featured">
+            <div class="inner">
+                <div class="clipper">
+                    <h2>Featured</h2>
+                </div>
+                <div class="anim-wrapper">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo modi, eos animi at ex maiores odio quae quisquam soluta, est, autem nostrum incidunt! Quibusdam, vitae quo ullam eaque odio nostrum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia.</p>
+                    <a href="#" class="read-button">Find Out More</a>
+                </div>
+
+            </div>
+        </section>
+        <section id="subscribe">
+            <div class="inner">
+                <div class="clipper">
+                    <h2>Subscribe</h2>
+                </div>
+                <div class="anim-wrapper">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <input type="text" name="email" placeholder="Email Address">
+                    <button class="submit">Subscribe</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script>
+        const t1 = new TimelineMax();
+        t1.staggerFrom('header', 1,{
+            opacity:0,
+            y:-40,
+        })
+        t1.staggerFrom('section', 1,
+        {
+            opacity:0,
+            x:-200,
+        },0.2, "-=1")
+
+        t1.staggerFrom('h1,h2',1,
+        {
+            opacity:0,
+            x:-40,
+        },0.2, "-=1")
+
+        t1.staggerFrom('.anim-wrapper',1,
+        {
+            opacity:0,
+            x:-40,
+        },0.2, "-=1")
+
+    </script>
+</body>
+</html>
