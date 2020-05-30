@@ -3,6 +3,7 @@ html, body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   height: 100%;
+  background-color: black;
 }
 
 * {
@@ -39,7 +40,6 @@ header .links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 30%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -105,7 +105,8 @@ section#hero {
 }
 
 section#hero .inner h3 {
-  width: 18em;
+  width: 50%;
+  max-width: 18em;
 }
 
 section#hero .inner h1, section#hero .inner h3 {
@@ -136,6 +137,7 @@ section#featured .read-button {
 }
 
 section#subscribe {
+  background-color: #fff2f2;
   color: black;
 }
 
@@ -166,6 +168,12 @@ section#subscribe .submit {
   font-size: 1em;
 }
 
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 @media screen and (min-width: 1060px) {
   .wrapper {
     -ms-grid-columns: 70% auto;
@@ -193,11 +201,16 @@ section#subscribe .submit {
   header {
     background: none;
   }
+  header .links {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 30%;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1600px) {
   html {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
