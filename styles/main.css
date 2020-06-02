@@ -168,6 +168,20 @@ section#subscribe .submit {
   font-size: 1em;
 }
 
+a {
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
 @media screen and (min-width: 768px) {
   html {
     font-size: 18px;
